@@ -1,18 +1,12 @@
 // Test ID: IIDSAT
 
-import {
-  calcMinutesLeft,
-  formatCurrency,
-  formatDate,
-} from "../../utils/helpers";
+import { calcMinutesLeft, formatCurrency, formatDate } from "../utils/helpers";
 
 const order = {
-  id: "ABCDEF",
   customer: "Jonas",
   phone: "123456789",
   address: "Arroios, Lisbon , Portugal",
   priority: true,
-  estimatedDelivery: "2027-04-25T10:00:00",
   cart: [
     {
       pizzaId: 7,
@@ -43,15 +37,8 @@ const order = {
 
 function Order() {
   // Everyone can search for all orders, so for privacy reasons we're gonna gonna exclude names or address, these are only for the restaurant staff
-  const {
-    id,
-    status,
-    priority,
-    priorityPrice,
-    orderPrice,
-    estimatedDelivery,
-    cart,
-  } = order;
+  const { status, priority, priorityPrice, orderPrice, estimatedDelivery } =
+    order;
   const deliveryIn = calcMinutesLeft(estimatedDelivery);
 
   return (
