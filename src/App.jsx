@@ -1,7 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { loader as menuLoader } from "./menu/Menu";
 import Home from "./ui/Home";
-import Menu from "./menu/MenuItem";
+import Menu, { loader as menuLoader } from "./menu/Menu";
 import Cart from "./cart/Cart";
 import CreateOrder from "./orders/CreateOrder";
 import Order from "./orders/Order";
