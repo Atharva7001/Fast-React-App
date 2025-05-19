@@ -12,6 +12,7 @@ function CreateUser() {
       <p>👋 Welcome! Please start by telling us your name:</p>
 
       <input
+        className="input mb-8 w-72"
         type="text"
         placeholder="Your full name"
         value={username}
